@@ -1,0 +1,13 @@
+<mat-toolbar color='warn'>
+  <span>Notas App</span>
+  <span class="example-spacer"  ></span>
+  <button mat-button class="example-icon" [routerLink]="'/home'">
+    Home
+  </button>
+  <button mat-button class="example-icon" [routerLink]="'/mynotes'">
+    My Notes
+  </button>
+</mat-toolbar>
+<div class="app-container">
+  <router-outlet></router-outlet>
+</div>

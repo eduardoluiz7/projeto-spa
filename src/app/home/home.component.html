@@ -1,0 +1,26 @@
+<h2>Salve suas anotações!</h2>
+
+<mat-card class="card">
+    <mat-card-content>
+        <form class="form-content" [formGroup]="this.registro" (ngSubmit)="submit()" (ngReset)="reiniciarForm()">
+            <mat-form-field class="example-full-width">
+                <mat-label>Title</mat-label>
+                <input matInput name="title" formControlName="title" placeholder="title">
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput formControlName="description" placeholder="Description" name="description"></textarea>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Date</mat-label>
+                <input matInput formControlName="date" name="date" placeholder="date">
+            </mat-form-field>
+        
+            <mat-card-actions>
+                <button type="submit" color="accent" mat-raised-button>Salvar</button>
+                <button type="reset" color="warn" mat-raised-button>Cancelar</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>

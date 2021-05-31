@@ -1,0 +1,10 @@
+<mat-list class="list" role="list" *ngIf="notes.length; else semRegistro">
+    <mat-list-item  class="card" role="listitem" *ngFor="let note of notes">
+        <mat-card style="width: 400px;">
+            <mat-card-header>{{note.title}}</mat-card-header>
+            <mat-card-content>{{note.description}}</mat-card-content>
+            <mat-card-footer>{{note.date}}</mat-card-footer>
+        </mat-card>
+    </mat-list-item>
+</mat-list>
+<ng-template #semRegistro><h2>Nenhuma nota encontrada</h2></ng-template>
